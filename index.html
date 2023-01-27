@@ -1,40 +1,87 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/league.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-transition="zoom">Slide 1</section>
+      <section>
+        <section>Vertical 1</section>
+        <section>Vertical 2</section>
+      </section>
+      <section data-auto-animate>
+        <h1>Implicit</h1>
+      </section>
+      <section data-auto-animate>
+        <h1>Implicit</h1>
+        <h1>Animation</h1>
+      </section>
+      <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+        <h2>🐟</h2>
+      </section>
+      <section data-background-gradient="radial-gradient(#283b95, #17b2c3)">
+        <h2>🐳</h2>
+      </section>
+      <section data-background-image="http://example.com/image.png">
+        <h2>Image</h2>
+      </section>
+      <section
+        data-background-image="https://mobidev.biz/wp-content/uploads/2020/06/2400-react-native-app-development-1920x1080.png">
+        <h2>This background image will be sized to 100px and repeated</h2>
+      </section>
+      <section>Slide 2
+        <aside class="notes">
+          notes
+        </aside>
+
+      </section>
+      <section data-markdown>
+        <textarea data-template>
+            ## Slide 1
+            A paragraph with some text and a [link](https://hakim.se).
+            ---
+            ## Slide 2
+            ---
+            ## Slide 3
+          </textarea>
+      </section>
+      <section>
+        <p class="fragment" data-fragment-index="3">Appears last</p>
+        <p class="fragment" data-fragment-index="1">Appears first</p>
+        <p class="fragment" data-fragment-index="2">Appears second</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      progress: true,
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
 </html>
