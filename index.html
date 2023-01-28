@@ -18,38 +18,124 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-transition="zoom">Slide 1</section>
-      <section>
-        <section>Vertical 1</section>
-        <section>Vertical 2</section>
-      </section>
-      <section data-auto-animate>
-        <h1>Implicit</h1>
-      </section>
-      <section data-auto-animate>
-        <h1>Implicit</h1>
-        <h1>Animation</h1>
-      </section>
-      <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
-        <h2>🐟</h2>
-      </section>
-      <section data-background-gradient="radial-gradient(#283b95, #17b2c3)">
-        <h2>🐳</h2>
-      </section>
-      <section data-background-image="http://example.com/image.png">
-        <h2>Image</h2>
-      </section>
-      <section
+      <section data-transition="zoom"
         data-background-image="https://mobidev.biz/wp-content/uploads/2020/06/2400-react-native-app-development-1920x1080.png">
-        <h2>This background image will be sized to 100px and repeated</h2>
-      </section>
-      <section>Slide 2
+        <h1> React Native</h1>
         <aside class="notes">
           notes
         </aside>
+        What's this?
+      </section>
+      <section
+        data-background-image="https://mobidev.biz/wp-content/uploads/2020/06/2400-react-native-app-development-1920x1080.png">
+        <section>
+          <h2>Plan</h2>
+          <ul>
+            <li>What is React Native?</li>
+            <li>History </li>
+            <li> React vs. React Native </li>
+            <li>What is cross-platform development?</li>
+            <li>How does React Native work?</li>
+            <li> What makes React Native unique? </li>
+            <li>Benefits of React Native</li>
+            <li>Examples of apps built with React Native</li>
+          </ul>
+        </section>
+        <section>
+          <h2>What is React Native ?</h2>
+          <p>It is a framework that allows you to create applications for different platforms using the same codebase.
+          </p>
+          <p> With React Native, companies can only create code once and use it to power their iOS and Android apps.</p>
+          <p>React Native was built on top of React, a JavaScript library that was already extremely popular when the
+            mobile platform was released.</p>
+        </section>
+      </section>
+      <section data-transition="zoom">
+        <h3> History </h3>
+        <p>In 2012, Mark Zuckerberg admitted that “the biggest mistake we made as a company was that we bet too much on
+          HTML.
+          in 2013, Facebook developer Jordan Walk made a discovery,when he found a method to create UI elements for iOS
+          apps using JavaScript.</p>
+        <p>
+          This caused a sensation and a special hackathon was organized to explore how much mobile development can be
+          done using traditional JavaScript web-solutions.
+        </p>
+      </section>
+      <section data-transition="zoom" data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+        <h2> React vs React Native </h2>
+        <p>Both React and React Native use a mix of JavaScript and a special markup language called JSX.</p>
+        <p>
+          However, the syntax used to render elements in JSX components is different between React and React Native.
+          React JSX renders HTML-like components such as
+          <\h1> , <\p> , etc. Meanwhile, react-native renders the application's native view components such as <\View> ,
+                <\Text> , <\Image> ,
+                    <\ScrollView />
+        </p>
+      </section>
+      <section data-transition="zoom">
+        <h2> Code for example </h2>
+        <pre><code data-trim data-noescape>
+          (
+          import React, {useState} from 'react';
+          import {View, Text, Button, StyleSheet} from 'react-native';
+
+          const App = () => {
+            const [count, setCount] = useState(0);
+
+            return (
+              <\View style={styles.container}/>
+                <\Text>You clicked {count} times</>
+                <\Button
+                  onPress={() => setCount(count + 1)}
+                  title="Click me!"
+                />
+              </>
+            );
+          };
+
+          // React Native Styles
+          const styles = StyleSheet.create({
+            container: {
+              flex: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+            },
+          }))
+            </code></pre>
 
       </section>
-      <section data-markdown>
+      <section data-auto-animate data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+        <h2>Cross-platform development</h2>
+        <p>Cross-platform development is the practice of creating software that is compatible with more than one type of
+          hardware platform.</p>
+        <h3>What are the advantages</h3>
+        <ul>
+          <li> Large audience </li>
+          <li> Platform Consistency </li>
+          <li> Reusable code </li>
+          <li>Cost reduction</li>
+        </ul>
+      </section>
+      <section data-auto-animate data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+        <h2>How does react native work</h2>
+        <p>React Native uses what is called a “bridge”. JavaScript stream and native streams are written in completely
+          different languages, but with the bridging feature system makes bidirectional communication possible.</p>
+        <img data-src="https://i.stack.imgur.com/Iu8pj.png">
+
+      </section>
+      <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+        <h2>Why React Native is unique?</h2>
+        <p>
+          The difference between React Native and other cross-platform development solutions (such as Cordova and
+          PhoneGap) is that React Native doesn't render a WebView in code. It runs on real, native views and
+          components. This is one of the reasons for React Native's impressive success.
+        </p>
+      </section>
+      <!-- <section data-background-gradient="radial-gradient(#283b95, #17b2c3)">
+        <h2>🐳</h2>
+      </section> -->
+
+      <!-- <section data-markdown>
         <textarea data-template>
             ## Slide 1
             A paragraph with some text and a [link](https://hakim.se).
@@ -58,6 +144,15 @@
             ---
             ## Slide 3
           </textarea>
+      </section> -->
+      <section>
+        <h2>Examples of popular applications</h2>
+        <img
+          data-src="https://www.educationandlife.com/wp-content/uploads/2021/09/apps_using_react_native-1536x933.jpg">
+      </section>
+      <section
+        data-background-image="https://mobidev.biz/wp-content/uploads/2020/06/2400-react-native-app-development-1920x1080.png">
+        <h1>Thanks for attention!</h1>
       </section>
       <section>
         <p class="fragment" data-fragment-index="3">Appears last</p>
