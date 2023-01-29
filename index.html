@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/league.css">
+  <link rel="stylesheet" href="dist/theme/moon.css">
 
   <!-- Theme used for syntax highlighted code -->
   <link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -24,20 +24,17 @@
         <aside class="notes">
           notes
         </aside>
-        What's this?
       </section>
-      <section
-        data-background-image="https://mobidev.biz/wp-content/uploads/2020/06/2400-react-native-app-development-1920x1080.png">
+      <section>
         <section>
           <h2>Plan</h2>
           <ul>
             <li>What is React Native?</li>
-            <li>History </li>
+            <li> History </li>
             <li> React vs. React Native </li>
-            <li>What is cross-platform development?</li>
             <li>How does React Native work?</li>
+            <li>What is cross-platform development?</li>
             <li> What makes React Native unique? </li>
-            <li>Benefits of React Native</li>
             <li>Examples of apps built with React Native</li>
           </ul>
         </section>
@@ -61,15 +58,16 @@
           done using traditional JavaScript web-solutions.
         </p>
       </section>
-      <section data-transition="zoom" data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+      <section data-transition="zoom">
         <h2> React vs React Native </h2>
         <p>Both React and React Native use a mix of JavaScript and a special markup language called JSX.</p>
         <p>
           However, the syntax used to render elements in JSX components is different between React and React Native.
           React JSX renders HTML-like components such as
-          <\h1> , <\p> , etc. Meanwhile, react-native renders the application's native view components such as <\View> ,
-                <\Text> , <\Image> ,
-                    <\ScrollView />
+          &lt;h1&gt; , &lt;p&gt; , etc. Meanwhile, react-native renders the application's native view components such as
+          &lt;View&gt; ,
+          &lt;Text&gt; , &lt;Image&gt;,
+          &lt;ScrollView&gt;
         </p>
       </section>
       <section data-transition="zoom">
@@ -82,10 +80,10 @@
           const App = () => {
             const [count, setCount] = useState(0);
 
-            return (
-              <\View style={styles.container}/>
-                <\Text>You clicked {count} times</>
-                <\Button
+            return (<
+              &lt;View&gt; style={styles.container}/>
+                &lt;Text&gt;>You clicked {count} times</&lt;Text&gt;>
+                &lt;Button&gt;
                   onPress={() => setCount(count + 1)}
                   title="Click me!"
                 />
@@ -104,47 +102,35 @@
             </code></pre>
 
       </section>
-      <section data-auto-animate data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
-        <h2>Cross-platform development</h2>
-        <p>Cross-platform development is the practice of creating software that is compatible with more than one type of
-          hardware platform.</p>
-        <h3>What are the advantages</h3>
-        <ul>
-          <li> Large audience </li>
-          <li> Platform Consistency </li>
-          <li> Reusable code </li>
-          <li>Cost reduction</li>
-        </ul>
-      </section>
-      <section data-auto-animate data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+      <section data-auto-animate >
         <h2>How does react native work</h2>
         <p>React Native uses what is called a “bridge”. JavaScript stream and native streams are written in completely
           different languages, but with the bridging feature system makes bidirectional communication possible.</p>
         <img data-src="https://i.stack.imgur.com/Iu8pj.png">
 
       </section>
-      <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+      <section data-auto-animate >
+        <h2>Cross-platform development</h2>
+        <p>Cross-platform development is the practice of creating software that is compatible with more than one type of
+          hardware platform.</p>
+        <p>Logical components will be the same for android and iOS </p>
+        <ul>
+          <li class="fragment" data-fragment-index="1"> Large audience </li>
+          <li class="fragment" data-fragment-index="2"> Platform сonsistency </li>
+          <li class="fragment" data-fragment-index="3"> Reusable code </li>
+          <li class="fragment" data-fragment-index="4">Cost reduction</li>
+        </ul>
+      </section>
+      <section>
         <h2>Why React Native is unique?</h2>
         <p>
-          The difference between React Native and other cross-platform development solutions (such as Cordova and
+          The difference between React Native and other cross-platform development solutions (such as Flutter, Cordova
+          and
           PhoneGap) is that React Native doesn't render a WebView in code. It runs on real, native views and
           components. This is one of the reasons for React Native's impressive success.
         </p>
       </section>
-      <!-- <section data-background-gradient="radial-gradient(#283b95, #17b2c3)">
-        <h2>🐳</h2>
-      </section> -->
 
-      <!-- <section data-markdown>
-        <textarea data-template>
-            ## Slide 1
-            A paragraph with some text and a [link](https://hakim.se).
-            ---
-            ## Slide 2
-            ---
-            ## Slide 3
-          </textarea>
-      </section> -->
       <section>
         <h2>Examples of popular applications</h2>
         <img
@@ -154,14 +140,8 @@
         data-background-image="https://mobidev.biz/wp-content/uploads/2020/06/2400-react-native-app-development-1920x1080.png">
         <h1>Thanks for attention!</h1>
       </section>
-      <section>
-        <p class="fragment" data-fragment-index="3">Appears last</p>
-        <p class="fragment" data-fragment-index="1">Appears first</p>
-        <p class="fragment" data-fragment-index="2">Appears second</p>
-      </section>
     </div>
   </div>
-
   <script src="dist/reveal.js"></script>
   <script src="plugin/notes/notes.js"></script>
   <script src="plugin/markdown/markdown.js"></script>
